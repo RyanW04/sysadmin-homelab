@@ -1,5 +1,3 @@
-# sysadmin-homelab
-
 # Systems Administration Home Lab
 
 ## Project Overview
