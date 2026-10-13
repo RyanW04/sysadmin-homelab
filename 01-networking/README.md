@@ -10,27 +10,11 @@ The first phase covered physical connectivity, private IPv4 addressing, router a
 
 ## Network topology
 
-```text
-                   Household router
-                    192.168.1.0/24
-                          |
-                  Ethernet wall jack
-                          |
-                  Unmanaged switch
-                    /           \
-          Household device    Lab router (WAN)
-                                    |
-                      Router/firewall (LAN)
-                        10.10.10.1/24
-                                    |
-                            Managed switch
-                          /       |       \
-                       HV-01    HV-02    WS-01
-                                          
-                     WS-02: not yet connected
-```
+![Home Lab Network Topology](diagrams/network-topology.png)
 
-**Diagram:** A polished, sanitized network topology graphic will be added here. The ASCII representation above documents the current connection path in the meantime.
+*Diagram image pending upload to `01-networking/diagrams/network-topology.png`.*
+
+The diagram shows the household side (`192.168.1.0/24`) connected through an unmanaged switch to the lab router's WAN interface. The lab router's LAN interface (`10.10.10.1/24`) connects to the managed lab switch. HV-01, HV-02, and WS-01 are connected; WS-02 is not yet connected.
 
 The unmanaged switch remains on the household side so existing devices keep their normal connectivity independent of the lab. The dedicated router creates a separate lab subnet; a firewall access-control rule restricts lab-initiated traffic to the household subnet. Merely using a second router or a different subnet would not, by itself, guarantee isolation.
 
@@ -100,7 +84,7 @@ See [Network Verification](network-verification.md) for methods, results, and li
 
 ## Planned additions
 
-- A topology diagram created in diagrams.net.
+- Upload the finished network topology image to `diagrams/network-topology.png`.
 - Sanitized screenshots of the router access-control policy.
 - Redacted command outputs from repeatable verification tests, clearly labeled with the date captured.
 - Proxmox host configurations and later VLAN/DNS/DHCP exercises.
