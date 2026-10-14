@@ -103,7 +103,7 @@ I also gained experience distinguishing basic host connectivity from application
 
 **Detailed documentation:** [Networking Projects](01-networking/README.md)
 
-**Network diagram:** [View home lab network topology](01-networking/diagrams/network-topology.png) *(image to be uploaded)*
+**Network diagram:** [View home lab network topology](01-networking/diagrams/Household%20and%20Lab%20Network%20Diagram.png)
 
 ## Planned Technologies
 
