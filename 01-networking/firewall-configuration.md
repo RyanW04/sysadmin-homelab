@@ -36,6 +36,18 @@ The lab router sits between the home and lab networks. It performs routing/NAT t
 | Router connection to home | WAN |
 | Router connection to lab switch | LAN |
 
+### Captured configuration evidence
+
+**Access-control rule:**
+
+![Router access-control rule showing BLOCK_LAB_TO_HOME](screenshots/firewall-access-control.png)
+
+**IP address objects:**
+
+![Router IP address objects for lab and household subnets](screenshots/firewall-ip-address-objects.png)
+
+The address objects `LAB_SUBNET` and `HOME_SUBNET` are included in the corresponding `LAB_NETWORK` and `HOME_NETWORK` groups used by the rule (confirmed in the router's IP Group tab).
+
 ## Saved access-control rule
 
 I reviewed the router's **Firewall → Access Control** screen and confirmed the following visible rule settings:
