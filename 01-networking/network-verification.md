@@ -97,6 +97,22 @@ The router's access-control screen displayed:
 
 A saved rule establishes intended configuration, while traffic tests help validate behavior. Neither should be substituted for the other.
 
+## Captured test evidence — October 14, 2026
+
+**Gateway, external connectivity, and DNS:**
+
+![Lab gateway ping, external IP ping, and successful nslookup](screenshots/gateway-internet-dns-tests.png)
+
+**Lab-to-home attempt (source `10.10.10.101`):**
+
+![Test-NetConnection from lab to household device with failed ICMP and TCP port 80 results](screenshots/lab-to-home-isolation.png)
+
+**Home-to-home baseline (source `192.168.1.243`):**
+
+![Test-NetConnection from household source with successful ICMP and failed TCP port 80](screenshots/home-to-home-baseline.png)
+
+These later screenshots provide dated, reproducible evidence and are distinct from the earlier setup tests. They show that ICMP succeeded from home to the target but failed from the lab. TCP port 80 failed from **both** sources, so that TCP result cannot independently establish firewall enforcement.
+
 ## Result summary
 
 **Initial validation outcome:** Lab internet access and DNS worked, household-device baseline connectivity worked, and tested lab-to-household connections were unsuccessful as expected.
