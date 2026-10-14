@@ -10,9 +10,8 @@ The first phase covered physical connectivity, private IPv4 addressing, router a
 
 ## Network topology
 
-![Home Lab Network Topology](diagrams/network-topology.png)
+![Home Lab Network Topology](diagrams/Household%20and%20Lab%20Network%20Diagram.png)
 
-*Diagram image pending upload to `01-networking/diagrams/network-topology.png`.*
 
 The diagram shows the household side (`192.168.1.0/24`) connected through an unmanaged switch to the lab router's WAN interface. The lab router's LAN interface (`10.10.10.1/24`) connects to the managed lab switch. HV-01, HV-02, and WS-01 are connected; WS-02 is not yet connected.
 
@@ -84,7 +83,7 @@ See [Network Verification](network-verification.md) for methods, results, and li
 
 ## Planned additions
 
-- Upload the finished network topology image to `diagrams/network-topology.png`.
+- Upload the finished network topology image to `diagrams/Household%20and%20Lab%20Network%20Diagram.png`.
 - Sanitized screenshots of the router access-control policy.
 - Redacted command outputs from repeatable verification tests, clearly labeled with the date captured.
 - Proxmox host configurations and later VLAN/DNS/DHCP exercises.
