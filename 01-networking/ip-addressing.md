@@ -22,6 +22,12 @@ I configured a predictable private IPv4 network for the lab and used it as a pra
 
 The `/24` prefix allocates 24 bits to the network portion of a 32-bit IPv4 address. That leaves 8 host bits, so `2^8 = 256` total addresses; the network and broadcast addresses are not assigned as ordinary hosts.
 
+### Recorded workstation configuration
+
+![WS-01 IPv4 configuration, gateway, DHCP server, and DNS server](screenshots/ws01-ip-configuration.png)
+
+The WS-01 screenshot captures a DHCP lease of `10.10.10.101/24`, with gateway, DHCP server, and DNS server set to `10.10.10.1` (October 14, 2026).
+
 ## Address plan
 
 | System | Address | State |
