@@ -6,7 +6,7 @@
 
 I wanted my lab systems to receive normal internet connectivity while preventing lab-initiated connections to household devices. This allows experimentation with infrastructure services without exposing my everyday home network to the same changes.
 
-**Topology reference:** [Home Lab Network Diagram](diagrams/network-topology.png) *(image pending upload)*
+**Topology reference:** [Home Lab Network Diagram](diagrams/Household%20and%20Lab%20Network%20Diagram.png)
 
 ## Physical placement and traffic path
 
