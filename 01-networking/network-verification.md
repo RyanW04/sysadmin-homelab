@@ -1,6 +1,6 @@
 # Network Verification and Testing
 
-**Phase:** 01 — Networking | **Status:** Initial checks completed; raw evidence to be captured later
+**Phase:** 01 — Networking | **Status:** Initial validation completed; follow-up testing captured on October 14, 2026
 
 ## Objective
 
@@ -117,16 +117,17 @@ These later screenshots provide dated, reproducible evidence and are distinct fr
 
 **Initial validation outcome:** Lab internet access and DNS worked, household-device baseline connectivity worked, and tested lab-to-household connections were unsuccessful as expected.
 
-**Evidence limitations:** Initial tests were not archived with full outputs or logs. Only the observed outcomes and confirmed test methods are recorded here. I plan to add new, dated screenshots and command outputs without presenting them as original-session evidence.
+**Evidence interpretation:** The household target responded to ICMP from another household device but not from the lab. TCP port 80 was unreachable from both locations, so that TCP test was inconclusive as evidence of firewall enforcement. The ICMP comparison, together with the configured firewall policy, supports the conclusion that lab-to-home isolation is working as intended. Screenshots captured October 14 are follow-up evidence, not original setup logs; original raw command outputs were not archived.
 
 ## Follow-up evidence checklist
 
-- [ ] Save redacted `ipconfig /all` output or screenshot showing lab addressing.
-- [ ] Save dated successful DNS resolution output.
-- [ ] Save dated external connectivity test.
-- [ ] Verify a specific TCP service is reachable **home → home** before using it as a TCP isolation baseline.
-- [ ] Run the same permitted TCP test **lab → home** and record results, without changing the isolation policy.
-- [ ] Capture sanitized router policy screenshot and, if supported, relevant drop logs.
+- [x] Save redacted `ipconfig /all` screenshot showing lab addressing.
+- [x] Save dated successful DNS resolution output.
+- [x] Save dated external IP connectivity output.
+- [x] Capture household-to-household ICMP baseline and lab-to-household ICMP isolation results.
+- [x] Capture sanitized router access-control policy screenshot.
+- [ ] Optional: Validate a known listening TCP service from **home → home**, then compare **lab → home** without changing the firewall rules.
+- [ ] Optional: Correlate blocked traffic with firewall logs, if available.
 
 Do not expose MAC addresses, hardware identifiers, credentials, or unrelated household device details in public screenshots.
 
